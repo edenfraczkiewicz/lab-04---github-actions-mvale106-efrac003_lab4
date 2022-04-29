@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main, mvale106/ci_setup]
+    branches: [ main, mvale106/failing_tests. efrac003/passing_tests]
   pull_request:
     branches: [ main ]
 
@@ -34,3 +34,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      - name: Run submodule
+        run: git submodule update --init --recursive
+        
+      - name: Run cmake
+        run: cmake .
+        
+      - name: Run make
+        run: make
+        
+      - name: Run executable
+        run: ./test
