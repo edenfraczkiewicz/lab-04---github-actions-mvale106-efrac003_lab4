@@ -12,3 +12,12 @@ int Rectangle::area() {
 	return this->width * this->height;
 }
 
+Rectangle(int w, int h) {
+	this->width = w;
+	this->height = h;
+}
+
+int Rectangle::perimeter() {
+	return (this->width *2) + (this->height*2);
+}  
+
