@@ -18,6 +18,6 @@ Rectangle(int w, int h) {
 }
 
 int Rectangle::perimeter() {
-	return (this->width *2) + (this->height*2);
+	return (2 * (this->width + this->height);
 }  
 
