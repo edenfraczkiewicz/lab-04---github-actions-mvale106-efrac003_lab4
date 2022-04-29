@@ -1,20 +1,17 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
-SET(CMAKE_CXX_STANDARD 11)
-
 ADD_SUBDIRECTORY(googletest)
 
-ADD_EXECUTABLE(area_calculator
-    src/main1.cpp
+SET(CMAKE_CXX_STANDARD 11)
+
+ADD_EXECUTABLE(calculator
+    src/main.cpp
     src/rectangle.cpp
 )
 
-ADD_EXECUTABLE(c-echo
-    main2.cpp
-)
-
 ADD_EXECUTABLE(test
-    test.cpp
+    tests/test.cpp
+    src/rectangle.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
